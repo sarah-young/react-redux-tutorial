@@ -2,7 +2,8 @@ import React, {Component} from 'react'; // Name spaced so vague references work 
 import ReactDOM from 'react-dom'; // Both libraries are needed
 import SearchBar from './components/search_bar';
 import YTSearch from 'youtube-api-search';
-import VideoList from './components/video_list'
+import VideoList from './components/video_list';
+import VideoDetail from './components/video_details';
 
 const API_KEY = "AIzaSyBGNojjRNFb18HPRq0yFYwE8pD1YWftTCI";
 
@@ -18,8 +19,11 @@ class App extends Component { // ES 2016 syntax (const instead of var; doesn't c
 
   render() {
     return (
-        <SearchBar />,
+      <div>
+        <SearchBar />
+        <VideoDetail video={this.state.videos[0]} />
         <VideoList videos={this.state.videos} />
+      </div>
     );
   }
 }
