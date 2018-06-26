@@ -5,7 +5,6 @@ import YTSearch from 'youtube-api-search';
 import VideoList from './components/video_list';
 import VideoDetail from './components/video_details';
 
-const API_KEY = "AIzaSyBGNojjRNFb18HPRq0yFYwE8pD1YWftTCI";
 
 class App extends Component { // ES 2016 syntax (const instead of var; doesn't change; => function in ES6)
    constructor(props) {
